@@ -14,6 +14,9 @@
   @Html.Label("Date of Enrollment")
   @Html.TextBox("EnrollmentDate", null, new { type="date"})
 
+  @Html.Label("Select course")
+  @Html.DropDownList("CourseId")
+
   <input type="submit" value="Add new student" class="btn btn-primary"/>
 }
 

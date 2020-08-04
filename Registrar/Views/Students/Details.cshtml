@@ -10,4 +10,19 @@
 <br>
 <h4>@Html.DisplayNameFor(model => model.EnrollmentDate): @Html.DisplayFor(model => model.EnrollmentDate)</h4>
 
+@if(@Model.Courses.Count == 0)
+{
+  <p>This student doesn't have any courses.</p>
+}
+else
+{
+  <h4>Courses this student is taking:</h4>
+  <ul>
+    @foreach (var join in Model.Courses)
+    {
+      <li>@join.Course.CourseNumber | @join.Course.CourseName</li>
+    }
+  </ul>
+}
+
 <p>@Html.ActionLink("Back to Student List", "Index")</p>
