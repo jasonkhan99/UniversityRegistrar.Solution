@@ -24,5 +24,6 @@ else
     }
   </ul>
 }
-
+<p>@Html.ActionLink("Edit student", "Edit", new { id = Model.StudentId})</p>
+<p>@Html.ActionLink("Add course to schedule", "AddCourse", new { id = Model.StudentId })</p>
 <p>@Html.ActionLink("Back to Student List", "Index")</p>
