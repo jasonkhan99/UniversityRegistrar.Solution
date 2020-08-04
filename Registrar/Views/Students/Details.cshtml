@@ -1,0 +1,13 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Registrar.Models.Student
+
+<h2>Student Details</h2>
+<br>
+<h3>@Html.DisplayFor(model => model.Name)</h3>
+<br>
+<h4>@Html.DisplayNameFor(model => model.EnrollmentDate): @Html.DisplayFor(model => model.EnrollmentDate)</h4>
+
+<p>@Html.ActionLink("Back to Student List", "Index")</p>

@@ -33,5 +33,13 @@ namespace Registrar.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+
+    public ActionResult Details(int id)
+    {
+      var thisStudent = _db.Students
+        .Include(student => student.Courses)
+        .FirstOrDefault(student => student.StudentId == id);
+      return View(thisStudent);
+    }
   }
 }
